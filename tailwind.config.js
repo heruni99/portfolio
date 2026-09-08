@@ -1,17 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        bg: "#111932",
-        bgAlt: "#172342",
-        ink: "#F8FAFC",
-        inkSoft: "#94A3B8",
-        rose: "#F43F5E",
-        roseDeep: "#FB7185",
-        roseWash: "#1C2744",
-        line: "#233257",
+        bg: "rgb(var(--color-bg) / <alpha-value>)",
+        bgAlt: "rgb(var(--color-bg-alt) / <alpha-value>)",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        inkSoft: "rgb(var(--color-ink-soft) / <alpha-value>)",
+        rose: "rgb(var(--color-rose) / <alpha-value>)",
+        roseDeep: "rgb(var(--color-rose-deep) / <alpha-value>)",
+        roseWash: "rgb(var(--color-rose-wash) / <alpha-value>)",
+        line: "rgb(var(--color-line) / <alpha-value>)",
       },
       fontFamily: {
         mono: ["'Space Mono'", "monospace"],

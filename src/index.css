@@ -2,14 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-bg: 255 255 255;
+    --color-bg-alt: 248 249 250;
+    --color-ink: 15 23 42;
+    --color-ink-soft: 71 85 105;
+    --color-rose: 124 58 237;
+    --color-rose-deep: 109 40 217;
+    --color-rose-wash: 243 232 255;
+    --color-line: 226 232 240;
+  }
+
+  .dark {
+    --color-bg: 9 13 22;
+    --color-bg-alt: 15 23 42;
+    --color-ink: 248 250 252;
+    --color-ink-soft: 148 163 184;
+    --color-rose: 167 139 250;
+    --color-rose-deep: 196 181 253;
+    --color-rose-wash: 30 27 75;
+    --color-line: 30 41 59;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: #f8fafc;
-  background-color: #111932;
+  color: rgb(var(--color-ink));
+  background-color: rgb(var(--color-bg));
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 section {

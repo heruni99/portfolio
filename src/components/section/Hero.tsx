@@ -5,28 +5,36 @@ const rolesList = ["web.", "problems that matter.", "clean code.", "the next opp
 
 export default function Hero() {
   return (
-    <section id="hero" className="mx-auto grid max-w-[1400px] grid-cols-[1.2fr_0.8fr] items-center gap-16 px-12 py-28 max-lg:grid-cols-1 max-md:px-6 max-md:py-16">
-      <div>
-        <h1 className="mb-6 text-5xl font-semibold leading-tight tracking-tight lg:text-6xl">
+    <section id="hero" className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-8 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-12 lg:py-24">
+      <div className="flex flex-col justify-center">
+        <h1 className="mb-6 text-5xl font-extrabold leading-[1.15] tracking-tight text-ink sm:text-6xl lg:text-7xl">
           <AsciiMorphText text="Hi, I'm Heruni" />
         </h1>
-        <div className="mb-10 min-h-[32px] font-mono text-xl text-inkSoft lg:text-2xl">
-          I build for the <TypewriterCarousel roles={rolesList} className="font-bold text-roseDeep" />
+        <div className="mb-10 min-h-[36px] font-mono text-xl text-inkSoft sm:text-2xl lg:text-3xl">
+          I build for the <TypewriterCarousel roles={rolesList} className="font-bold text-rose" />
         </div>
-        <div className="flex gap-4">
-          <a href="#" className="rounded-xl border border-rose bg-rose px-7 py-3.5 text-base font-medium text-white transition-all hover:bg-roseDeep">
+        <div className="flex flex-wrap gap-4">
+          <a
+            href="#"
+            className="rounded-2xl bg-rose px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-roseDeep hover:shadow-xl hover:-translate-y-0.5"
+          >
             Resume →
           </a>
-          <a href="#projects" className="rounded-xl border border-rose px-7 py-3.5 text-base font-medium text-roseDeep transition-all hover:bg-roseWash">
+          <a
+            href="#projects"
+            className="rounded-2xl border border-line bg-white px-8 py-4 text-base font-semibold text-ink transition-all hover:border-rose hover:bg-roseWash hover:text-roseDeep hover:-translate-y-0.5"
+          >
             See projects →
           </a>
         </div>
       </div>
-      <div className="relative justify-self-center max-lg:order-first max-lg:mb-6">
-        <div className="absolute -left-6 top-6 -z-10 h-[400px] w-[340px] rounded-3xl border border-rose opacity-80" />
-        <div className="absolute -right-6 -top-6 -z-10 rounded-full bg-rose opacity-90" style={{ height: 72, width: 72 }} />
-        <div className="flex h-96 w-80 items-center justify-center overflow-hidden rounded-3xl border border-line bg-roseWash p-6 text-center font-mono text-base text-roseDeep shadow-xl">
-          your photo here
+      <div className="relative flex justify-center lg:justify-end">
+        <div className="relative w-full max-w-[460px] overflow-hidden rounded-[32px] shadow-2xl transition-all duration-300 hover:shadow-[0_25px_60px_rgba(124,58,237,0.18)]">
+          <img
+            src="/profile.png"
+            alt="Heruni"
+            className="h-[480px] w-full object-cover sm:h-[540px] lg:h-[580px]"
+          />
         </div>
       </div>
     </section>
