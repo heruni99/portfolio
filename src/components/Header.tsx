@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between border-b border-line bg-bg/90 px-12 py-5 backdrop-blur-sm max-md:flex-wrap max-md:gap-3 max-md:px-6">
       <a href="#hero" className="font-mono text-lg font-bold tracking-wide text-roseDeep">
-        samu_codes
+        Samu_codes
       </a>
       <nav className="flex items-center gap-9 max-md:order-3 max-md:w-full max-md:justify-center max-md:gap-5">
         {navItems.map((item) => (
