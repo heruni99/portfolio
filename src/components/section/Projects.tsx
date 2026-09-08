@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projects, type ProjectCategory } from "../data/projects";
+import { projects, type ProjectCategory } from "../../data/projects";
 
 const filters: { label: string; value: ProjectCategory | "all" }[] = [
   { label: "All projects", value: "all" },

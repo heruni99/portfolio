@@ -1,5 +1,5 @@
-import AsciiMorphText from "./AsciiMorphText";
-import TypewriterCarousel from "./TypewriterCarousel";
+import AsciiMorphText from "../ui/AsciiMorphText";
+import TypewriterCarousel from "../ui/TypewriterCarousel";
 
 const rolesList = ["web.", "problems that matter.", "clean code.", "the next opportunity."];
 
@@ -27,7 +27,6 @@ export default function Hero() {
         <div className="absolute -right-5 -top-5 -z-10 rounded-full bg-rose opacity-90" style={{ height: 60, width: 60 }} />
         <div className="flex h-80 w-64 items-center justify-center overflow-hidden rounded-2xl border border-line bg-roseWash p-5 text-center font-mono text-sm text-roseDeep">
           your photo here
-          {/* Replace this div's children with: <img src="/your-photo.jpg" alt="Heruni" className="h-full w-full rounded-2xl object-cover" /> */}
         </div>
       </div>
     </section>

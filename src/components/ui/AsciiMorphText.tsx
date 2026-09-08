@@ -26,9 +26,9 @@ export const AsciiMorphText: React.FC<AsciiMorphTextProps> = ({ text, className 
         return;
       }
 
-      const delay = index * 100; // Staggered reveal per letter
+      const delay = index * 100;
       const iterations = 10;
-      const stepDuration = 50; // Random character change interval
+      const stepDuration = 50;
 
       for (let i = 0; i <= iterations; i++) {
         const timeout = setTimeout(() => {
