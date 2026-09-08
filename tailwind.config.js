@@ -4,18 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#FDFBF8",
-        bgAlt: "#F8F2EF",
-        ink: "#2B2321",
-        inkSoft: "#766863",
-        rose: "#C06A82",
-        roseDeep: "#9C4F65",
-        roseWash: "#F5DEE4",
-        line: "#E9DFDA",
+        bg: "#111932",
+        bgAlt: "#172342",
+        ink: "#F8FAFC",
+        inkSoft: "#94A3B8",
+        rose: "#F43F5E",
+        roseDeep: "#FB7185",
+        roseWash: "#1C2744",
+        line: "#233257",
       },
       fontFamily: {
         mono: ["'Space Mono'", "monospace"],
-        sans: ["Inter", "sans-serif"],
+        sans: ["'Plus Jakarta Sans'", "sans-serif"],
       },
     },
   },
