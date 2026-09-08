@@ -2,19 +2,19 @@ import { experience } from "../../data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-5xl px-12 py-20 max-md:px-6 max-md:py-14">
-      <p className="mb-2.5 font-mono text-sm text-roseDeep">experience</p>
-      <h2 className="mb-9 text-3xl font-semibold tracking-tight">Where I've spent my time</h2>
-      <div className="flex flex-col gap-10 border-l-2 border-line pl-8">
+    <section id="experience" className="mx-auto max-w-[1400px] px-12 py-24 max-md:px-6 max-md:py-16">
+      <p className="mb-3 font-mono text-base text-roseDeep">experience</p>
+      <h2 className="mb-12 text-4xl font-semibold tracking-tight">Where I've spent my time</h2>
+      <div className="flex flex-col gap-12 border-l-2 border-line pl-10">
         {experience.map((item) => (
           <div key={item.title} className="relative">
-            <div className="absolute -left-[38px] top-1 h-3 w-3 rounded-full border-[3px] border-bg bg-rose" />
-            <div className="mb-1.5 font-mono text-xs text-roseDeep">{item.date}</div>
-            <h3 className="mb-1 text-base font-semibold">{item.title}</h3>
-            <div className="mb-2.5 text-sm text-inkSoft">{item.org}</div>
-            <ul className="list-disc pl-4.5 text-sm text-inkSoft">
+            <div className="absolute -left-[47px] top-1.5 h-3.5 w-3.5 rounded-full border-[3px] border-bg bg-rose shadow-sm" />
+            <div className="mb-2 font-mono text-sm text-roseDeep">{item.date}</div>
+            <h3 className="mb-1 text-xl font-bold text-ink">{item.title}</h3>
+            <div className="mb-3 text-base text-inkSoft">{item.org}</div>
+            <ul className="list-disc pl-5 text-base text-inkSoft">
               {item.points.map((point) => (
-                <li key={point} className="mb-1">
+                <li key={point} className="mb-1.5 leading-relaxed">
                   {point}
                 </li>
               ))}
