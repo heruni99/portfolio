@@ -1,19 +1,22 @@
+import ScrollReveal from "./ScrollReveal";
+
 export default function Footer() {
   return (
-    <footer className="pt-16 bg-bg w-full">
-      {/* 100% Full-Bleed Dark Container Card with Large Top Rounded Corners */}
-      <div className="w-full rounded-t-[3rem] sm:rounded-t-[4rem] lg:rounded-t-[4.5rem] bg-[#0A0E17] text-white px-6 py-12 sm:px-12 sm:py-16 lg:px-20 lg:py-20 border-t border-white/10 shadow-2xl">
-        <div className="mx-auto max-w-[1400px] flex flex-col gap-12 sm:gap-16">
-          
-          {/* Brand Header */}
-          <div className="flex flex-col gap-4 text-left border-b border-white/10 pb-10 sm:pb-12">
-            <span className="font-mono text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-white">
-              samu_codes<span className="text-rose">.</span>
-            </span>
-            <p className="text-white/60 font-sans text-base sm:text-lg max-w-[46ch]">
-              Building thoughtful digital products & software engineering solutions with clean code.
-            </p>
-          </div>
+    <footer className="pt-8 sm:pt-12 bg-bg w-full">
+      <ScrollReveal variant="fade-up" duration={850} delay={100}>
+        {/* 100% Full-Bleed Dark Container Card with Large Top Rounded Corners */}
+        <div className="w-full rounded-t-[2.5rem] sm:rounded-t-[3.5rem] bg-[#0A0E17] text-white px-6 py-8 sm:px-12 sm:py-10 lg:px-16 lg:py-12 border-t border-white/10 shadow-2xl">
+          <div className="mx-auto max-w-[1400px] flex flex-col gap-8 sm:gap-10">
+            
+            {/* Brand Header */}
+            <div className="flex flex-col gap-2.5 text-left border-b border-white/10 pb-6 sm:pb-8">
+              <span className="font-mono text-3xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white">
+                samu_codes<span className="text-rose">.</span>
+              </span>
+              <p className="text-white/60 font-sans text-sm sm:text-base max-w-[46ch]">
+                Building thoughtful digital products & software engineering solutions with clean code.
+              </p>
+            </div>
 
           {/* Navigation Links Grid */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-4 text-left">
@@ -146,8 +149,8 @@ export default function Footer() {
           </div>
 
         </div>
-
       </div>
-    </footer>
+    </ScrollReveal>
+  </footer>
   );
 }
