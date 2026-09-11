@@ -7,7 +7,7 @@ export default function Skills() {
     <section id="skills" className="px-6 py-24 max-md:py-16 sm:px-12 lg:px-16">
       <div className="mx-auto max-w-[1400px]">
         <p className="mb-3 font-mono text-base font-bold text-rose">skills</p>
-        <h2 className="mb-12 font-serif text-5xl font-normal italic tracking-tight text-ink sm:text-6xl">
+        <h2 className="mb-12 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl">
           Tech Stack & Tools
         </h2>
 

@@ -22,7 +22,7 @@ export default function Contact() {
         <div className="flex flex-col space-y-6 text-left">
           <p className="font-mono text-base font-bold text-rose">contact</p>
           
-          <h2 className="font-serif text-5xl font-normal italic tracking-tight text-ink sm:text-6xl lg:text-7xl">
+          <h2 className="font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl">
             Let's Collaborate
           </h2>
           

@@ -19,6 +19,7 @@ export default {
         mono: ["'Space Mono'", "monospace"],
         sans: ["'Plus Jakarta Sans'", "sans-serif"],
         serif: ["'Instrument Serif'", "'Playfair Display'", "Georgia", "serif"],
+        display: ["'Syne'", "'Unbounded'", "'Outfit'", "'Plus Jakarta Sans'", "sans-serif"],
       },
     },
   },

@@ -4,7 +4,7 @@ export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-[1400px] px-12 py-24 max-md:px-6 max-md:py-16">
       <p className="mb-3 font-mono text-base font-bold text-rose">experience</p>
-      <h2 className="mb-12 font-serif text-5xl font-normal italic tracking-tight text-ink sm:text-6xl">Where I've spent my time</h2>
+      <h2 className="mb-12 font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl">Where I've spent my time</h2>
       <div className="flex flex-col gap-12 border-l-2 border-line/60 pl-10">
         {experience.map((item) => (
           <div key={item.title} className="relative">
