@@ -11,6 +11,15 @@ export default function Hero() {
 
         {/* Left Column: AsciiMorphText greeting, Main headline, Typewriter, Social buttons */}
         <div className="flex flex-col space-y-6 text-left">
+          {/* Identity Tagline Badge with Pulsing Radio Indicator Dot */}
+          <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-line/80 glass-card px-4 py-1.5 font-mono text-xs font-extrabold uppercase tracking-widest text-rose shadow-sm">
+            <span className="relative flex h-2.5 w-2.5 items-center justify-center">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose/60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-rose" />
+            </span>
+            <span>software engineering undergraduate</span>
+          </div>
+
           {/* AsciiMorphText greeting */}
           <div className="text-3xl font-black uppercase tracking-tighter text-ink sm:text-4xl lg:text-5xl">
             <AsciiMorphText text="Hi, I'm Heruni" />
@@ -91,10 +100,16 @@ export default function Hero() {
               Explore Portfolio →
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-bgAlt px-7 py-3.5 text-xs font-bold uppercase tracking-widest text-ink transition-all hover:border-rose hover:bg-roseWash hover:text-roseDeep"
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-full border border-line/80 glass-card px-7 py-3.5 text-xs font-bold uppercase tracking-widest text-ink transition-all duration-300 hover:border-rose/80 hover:bg-rose/10 hover:text-rose hover:shadow-lg hover:scale-105"
             >
-              Let's Connect →
+              <svg className="h-4 w-4 stroke-current" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Download CV</span>
             </a>
           </div>
         </div>
