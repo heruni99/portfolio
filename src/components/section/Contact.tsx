@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-[1400px] px-12 py-24 text-center max-md:px-6 max-md:py-16">
       <p className="mb-3 font-mono text-base font-bold text-rose">contact</p>
-      <h2 className="mb-4 text-4xl font-semibold tracking-tight text-ink">Let's talk</h2>
+      <h2 className="mb-4 font-serif text-5xl font-normal italic tracking-tight text-ink sm:text-6xl">Let's talk</h2>
       <p className="mx-auto mb-10 max-w-[54ch] text-lg text-inkSoft">
         I'm actively looking for internship opportunities. Reach out if you'd like to chat
         about a role, a project, or anything in between.

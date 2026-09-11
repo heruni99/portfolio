@@ -16,7 +16,7 @@ export default function Projects() {
     <section id="projects" className="px-12 py-24 max-md:px-6 max-md:py-16">
       <div className="mx-auto max-w-[1400px]">
         <p className="mb-3 font-mono text-base font-bold text-rose">projects</p>
-        <h2 className="mb-10 text-4xl font-semibold tracking-tight text-ink">Things I've built</h2>
+        <h2 className="mb-10 font-serif text-5xl font-normal italic tracking-tight text-ink sm:text-6xl">Things I've built</h2>
 
         <div className="mb-10 flex flex-wrap gap-3">
           {filters.map((f) => (
