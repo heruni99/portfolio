@@ -8,8 +8,8 @@ const facts = [
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-[1400px] px-12 py-24 max-md:px-6 max-md:py-16">
-      <p className="mb-3 font-mono text-base text-roseDeep">about</p>
-      <h2 className="mb-10 text-4xl font-semibold tracking-tight">A little about me</h2>
+      <p className="mb-3 font-mono text-base font-bold text-rose">about</p>
+      <h2 className="mb-10 text-4xl font-semibold tracking-tight text-ink">A little about me</h2>
       <div className="grid grid-cols-2 items-start gap-16 max-lg:grid-cols-1">
         <p className="text-lg leading-relaxed text-inkSoft">
           I'm a second-year computer science undergraduate, currently building toward my

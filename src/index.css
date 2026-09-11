@@ -4,25 +4,29 @@
 
 @layer base {
   :root {
+    /* Custom Palette Light Mode */
     --color-bg: 255 255 255;
-    --color-bg-alt: 248 249 250;
-    --color-ink: 15 23 42;
-    --color-ink-soft: 71 85 105;
-    --color-rose: 124 58 237;
-    --color-rose-deep: 109 40 217;
-    --color-rose-wash: 243 232 255;
-    --color-line: 226 232 240;
+    --color-bg-alt: 243 246 250;
+    --color-ink: 11 27 50;              /* #0B1B32 - Deep Abyssal Navy */
+    --color-ink-soft: 38 65 94;         /* #26415E - Dark Slate Blue */
+    --color-rose: 196 140 179;          /* #C48CB3 - Muted Mauve Accent */
+    --color-rose-deep: 13 30 76;        /* #0D1E4C - Deep Navy Focus */
+    --color-rose-wash: 229 201 215;     /* #E5C9D7 - Soft Blush Wash */
+    --color-accent-blue: 131 166 206;   /* #83A6CE - Soft Steel Blue */
+    --color-line: 205 218 232;         /* Soft clean line */
   }
 
   .dark {
-    --color-bg: 9 13 22;
-    --color-bg-alt: 15 23 42;
-    --color-ink: 248 250 252;
-    --color-ink-soft: 148 163 184;
-    --color-rose: 167 139 250;
-    --color-rose-deep: 196 181 253;
-    --color-rose-wash: 30 27 75;
-    --color-line: 30 41 59;
+    /* Custom Palette Dark Mode */
+    --color-bg: 11 27 50;              /* #0B1B32 - Abyssal Navy */
+    --color-bg-alt: 13 30 76;          /* #0D1E4C - Deep Navy card background */
+    --color-ink: 244 247 252;          /* Clean light text */
+    --color-ink-soft: 131 166 206;     /* #83A6CE - Soft Steel Blue text */
+    --color-rose: 229 201 215;          /* #E5C9D7 - Soft Blush highlight */
+    --color-rose-deep: 196 140 179;     /* #C48CB3 - Muted Mauve */
+    --color-rose-wash: 38 65 94;       /* #26415E - Dark Slate wash */
+    --color-accent-blue: 131 166 206;   /* #83A6CE - Soft Steel Blue */
+    --color-line: 38 65 94;             /* #26415E - Slate border line */
   }
 }
 
@@ -33,12 +37,41 @@ html {
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: rgb(var(--color-ink));
-  background-color: rgb(var(--color-bg));
-  transition: background-color 0.2s ease, color 0.2s ease;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Gradient Background Light Mode: smooth fluid ambient flow combining pale blush #E5C9D7 and steel blue #83A6CE */
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(229, 201, 215, 0.55) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(131, 166, 206, 0.45) 0%, transparent 50%),
+    linear-gradient(135deg, #f8fafc 0%, #edf2f9 50%, #e5ebf5 100%);
+  background-attachment: fixed;
+}
+
+.dark body {
+  /* Gradient Background Dark Mode: rich deep techy gradient combining #0B1B32, #0D1E4C, and #26415E with subtle mauve aura #C48CB3 */
+  background-image: 
+    radial-gradient(circle at 85% 15%, rgba(196, 140, 179, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 15% 80%, rgba(38, 65, 94, 0.65) 0%, transparent 55%),
+    linear-gradient(135deg, #0b1b32 0%, #0d1e4c 55%, #182e54 100%);
+  background-attachment: fixed;
 }
 
 section {
   scroll-margin-top: 88px;
+}
+
+/* Glassmorphism panel card styling for techy clean look */
+.glass-card {
+  background-color: rgba(var(--color-bg), 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-card {
+  background-color: rgba(var(--color-bg-alt), 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 @keyframes blink {
@@ -68,3 +101,4 @@ section {
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
+

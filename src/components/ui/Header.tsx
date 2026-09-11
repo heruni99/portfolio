@@ -49,7 +49,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/95 backdrop-blur-md transition-colors duration-200">
+    <header className="sticky top-0 z-50 border-b border-line/60 glass-card transition-colors duration-200">
       <div className="w-full flex items-center justify-between px-6 py-4 sm:px-12 lg:px-16">
         {/* Top-Left: samu_codes. brand logo */}
         <a

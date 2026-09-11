@@ -12,6 +12,7 @@ export default {
         rose: "rgb(var(--color-rose) / <alpha-value>)",
         roseDeep: "rgb(var(--color-rose-deep) / <alpha-value>)",
         roseWash: "rgb(var(--color-rose-wash) / <alpha-value>)",
+        accentBlue: "rgb(var(--color-accent-blue) / <alpha-value>)",
         line: "rgb(var(--color-line) / <alpha-value>)",
       },
       fontFamily: {
@@ -22,3 +23,4 @@ export default {
   },
   plugins: [],
 };
+

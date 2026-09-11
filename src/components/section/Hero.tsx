@@ -12,7 +12,7 @@ export default function Hero() {
         {/* Left Column: samu_codes tag, AsciiMorphText greeting, Main headline, Typewriter */}
         <div className="flex flex-col space-y-6 text-left">
           {/* samu_codes branding tag */}
-          <div className="inline-block rounded-full bg-roseWash px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-wider text-roseDeep w-fit">
+          <div className="inline-block rounded-full border border-line/60 bg-roseWash/80 backdrop-blur-sm px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-wider text-roseDeep w-fit shadow-sm">
              samu_codes
           </div>
 
@@ -39,13 +39,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-rose px-7 py-3.5 text-xs font-bold uppercase tracking-widest text-white shadow-lg transition-all hover:bg-roseDeep hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose to-roseDeep px-7 py-3.5 text-xs font-bold uppercase tracking-widest text-white shadow-lg transition-all hover:shadow-xl hover:scale-105"
             >
               Explore Portfolio →
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-bgAlt px-7 py-3.5 text-xs font-bold uppercase tracking-widest text-ink transition-all hover:border-rose hover:bg-roseWash hover:text-roseDeep"
+              className="inline-flex items-center gap-2 rounded-full border border-line/80 glass-card px-7 py-3.5 text-xs font-bold uppercase tracking-widest text-ink transition-all hover:border-rose hover:text-rose"
             >
               Let's Connect →
             </a>
