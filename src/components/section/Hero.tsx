@@ -9,13 +9,8 @@ export default function Hero() {
       {/* Side-by-Side Grid Layout: Left Content, Right Profile Image */}
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
 
-        {/* Left Column: samu_codes tag, AsciiMorphText greeting, Main headline, Typewriter */}
+        {/* Left Column: AsciiMorphText greeting, Main headline, Typewriter, Social buttons */}
         <div className="flex flex-col space-y-6 text-left">
-          {/* samu_codes branding tag */}
-          <div className="inline-block rounded-full bg-roseWash px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-wider text-roseDeep w-fit">
-            samu_codes
-          </div>
-
           {/* AsciiMorphText greeting */}
           <div className="text-3xl font-black uppercase tracking-tighter text-ink sm:text-4xl lg:text-5xl">
             <AsciiMorphText text="Hi, I'm Heruni" />
@@ -32,9 +27,61 @@ export default function Hero() {
             I build for the <TypewriterCarousel roles={rolesList} className="font-bold text-rose" />
           </div>
 
-          <p className="font-sans text-base font-medium leading-relaxed text-inkSoft sm:text-lg pt-1">
-            Turning what if into what next with clean code, creative problem solving, and intuitive design.
-          </p>
+          {/* Social Links Row */}
+          <div className="flex items-center gap-3 pt-2">
+            {/* GitHub */}
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-line/80 glass-card text-ink transition-all duration-300 hover:border-rose hover:bg-rose/10 hover:text-rose hover:scale-110 hover:shadow-md"
+            >
+              <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-line/80 glass-card text-ink transition-all duration-300 hover:border-rose hover:bg-rose/10 hover:text-rose hover:scale-110 hover:shadow-md"
+            >
+              <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-line/80 glass-card text-ink transition-all duration-300 hover:border-rose hover:bg-rose/10 hover:text-rose hover:scale-110 hover:shadow-md"
+            >
+              <svg className="h-5 w-5 stroke-current" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:contact@example.com"
+              aria-label="Email"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-line/80 glass-card text-ink transition-all duration-300 hover:border-rose hover:bg-rose/10 hover:text-rose hover:scale-110 hover:shadow-md"
+            >
+              <svg className="h-5 w-5 stroke-current" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </a>
+          </div>
 
           <div className="flex flex-wrap gap-4 pt-4">
             <a
