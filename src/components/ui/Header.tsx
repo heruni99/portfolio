@@ -56,7 +56,7 @@ export default function Header() {
           href="#hero"
           className="font-mono text-2xl font-black tracking-tighter text-ink transition-colors hover:text-rose shrink-0"
         >
-          samu_codes<span className="text-rose">.</span>
+          Samu_codes<span className="text-rose">.</span>
         </a>
 
         {/* Center: Numbered Navigation Links */}
@@ -80,7 +80,7 @@ export default function Header() {
         </nav>
 
         {/* Top-Right: Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <button
             onClick={() => setIsDark(!isDark)}
             aria-label="toggle theme"
@@ -108,6 +108,14 @@ export default function Header() {
               </svg>
             )}
           </button>
+
+          <a
+            href="#contact"
+            className="group relative inline-flex items-center gap-2 rounded-full border border-line/80 glass-card px-5 py-2.5 font-sans text-xs font-extrabold uppercase tracking-wider text-ink transition-all duration-300 hover:border-rose/80 hover:bg-rose/10 hover:text-rose hover:shadow-[0_0_20px_rgba(196,140,179,0.25)]"
+          >
+            <span>Let's talk</span>
+            <span className="text-rose transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
         </div>
       </div>
 
