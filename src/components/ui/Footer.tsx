@@ -1,10 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="pt-16 bg-bg">
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-8">
-        
-        {/* Dark Container Card with Large Top Rounded Corners */}
-        <div className="rounded-t-[2.5rem] sm:rounded-t-[3.5rem] bg-[#0A0E17] text-white p-8 sm:p-14 lg:p-16 border-t border-x border-white/10 shadow-2xl flex flex-col gap-12 sm:gap-16">
+    <footer className="pt-16 bg-bg w-full">
+      {/* 100% Full-Bleed Dark Container Card with Large Top Rounded Corners */}
+      <div className="w-full rounded-t-[3rem] sm:rounded-t-[4rem] lg:rounded-t-[4.5rem] bg-[#0A0E17] text-white px-6 py-12 sm:px-12 sm:py-16 lg:px-20 lg:py-20 border-t border-white/10 shadow-2xl">
+        <div className="mx-auto max-w-[1400px] flex flex-col gap-12 sm:gap-16">
           
           {/* Brand Header */}
           <div className="flex flex-col gap-4 text-left border-b border-white/10 pb-10 sm:pb-12">
