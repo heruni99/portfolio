@@ -31,7 +31,7 @@ export default function Hero() {
           <div className="flex items-center gap-3 pt-2">
             {/* GitHub */}
             <a
-              href="https://github.com"
+              href="https://github.com/heruni99"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -44,7 +44,7 @@ export default function Hero() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/heruni-perera-5974032b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/its.samuu__?igsh=NXp3amIwMWdwdzk0"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -72,7 +72,7 @@ export default function Hero() {
 
             {/* Email */}
             <a
-              href="mailto:contact@example.com"
+              href="mailto:herunisp@gmail.com"
               aria-label="Email"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-line/80 glass-card text-ink transition-all duration-300 hover:border-rose hover:bg-rose/10 hover:text-rose hover:scale-110 hover:shadow-md"
             >

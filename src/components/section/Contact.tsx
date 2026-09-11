@@ -8,13 +8,13 @@ export default function Contact() {
         about a role, a project, or anything in between.
       </p>
       <div className="flex justify-center flex-wrap gap-5">
-        <a href="mailto:you@email.com" className="rounded-full bg-gradient-to-r from-rose to-roseDeep px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105">
+        <a href="mailto:herunisp@gmail.com" className="rounded-full bg-gradient-to-r from-rose to-roseDeep px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105">
           Email me →
         </a>
-        <a href="#" className="rounded-full border border-line/70 glass-card px-8 py-3.5 text-base font-bold text-ink transition-all hover:border-rose hover:text-rose">
+        <a href="https://www.linkedin.com/in/heruni-perera-5974032b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" className="rounded-full border border-line/70 glass-card px-8 py-3.5 text-base font-bold text-ink transition-all hover:border-rose hover:text-rose">
           LinkedIn →
         </a>
-        <a href="#" className="rounded-full border border-line/70 glass-card px-8 py-3.5 text-base font-bold text-ink transition-all hover:border-rose hover:text-rose">
+        <a href="https://github.com/heruni99" target="_blank" rel="noopener noreferrer" className="rounded-full border border-line/70 glass-card px-8 py-3.5 text-base font-bold text-ink transition-all hover:border-rose hover:text-rose">
           GitHub →
         </a>
       </div>
