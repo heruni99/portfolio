@@ -18,17 +18,17 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-[1400px] px-8 py-24 max-md:px-6 max-md:py-16 sm:px-12">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
-        
+
         {/* Left Column: Contact Copy & Info Cards */}
         <div className="flex flex-col space-y-6 text-left">
           <ScrollReveal variant="fade-up" delay={100}>
             <p className="font-mono text-base font-bold text-rose">contact</p>
-            
+
             <h2 className="font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl mt-2">
               Let's Collaborate
             </h2>
           </ScrollReveal>
-          
+
           <ScrollReveal variant="fade-up" delay={200}>
             <p className="text-lg font-medium leading-relaxed text-inkSoft">
               Have a project in mind or interested in collaborating? Let me know what you're working on and I'll get back to you as soon as possible.
