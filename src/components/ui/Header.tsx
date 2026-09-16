@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { id: "projects", num: "01", label: "Work" },
+  { id: "projects", num: "01", label: "Projects" },
   { id: "about", num: "02", label: "About" },
   { id: "skills", num: "03", label: "Skills" },
   { id: "contact", num: "04", label: "Contacts" },
