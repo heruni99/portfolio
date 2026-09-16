@@ -30,9 +30,6 @@ export default function Footer() {
               <a href="#about" className="text-sm font-medium text-white/80 transition-colors hover:text-white">
                 About
               </a>
-              <a href="#experience" className="text-sm font-medium text-white/80 transition-colors hover:text-white">
-                Experience
-              </a>
               <a href="#skills" className="text-sm font-medium text-white/80 transition-colors hover:text-white">
                 Skills
               </a>

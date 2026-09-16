@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 const navItems = [
   { id: "projects", num: "01", label: "Work" },
   { id: "about", num: "02", label: "About" },
-  { id: "experience", num: "03", label: "Experience" },
-  { id: "skills", num: "04", label: "Skills" },
-  { id: "contact", num: "05", label: "Contacts" },
+  { id: "skills", num: "03", label: "Skills" },
+  { id: "contact", num: "04", label: "Contacts" },
 ];
 
 export default function Header() {
