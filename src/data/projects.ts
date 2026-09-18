@@ -1,50 +1,42 @@
-export type ProjectCategory = "fullstack" | "frontend" | "backend";
+export type ProjectCategory = "fullstack" | "frontend" | "backend" | "mobile";
 
 export interface Project {
   id: string;
   name: string;
   tag: string;
   category: ProjectCategory;
+  role?: string;
+  subtitle?: string;
   description: string;
   stack: string[];
   demoUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  webHeroImage?: string;
 }
 
 export const projects: Project[] = [
   {
-    id: "applytrack",
-    name: "ApplyTrack",
-    tag: "Flagship project · Full stack",
-    category: "fullstack",
-    description:
-      "A full-stack job application tracker with a drag-and-drop pipeline, resume uploads, automated deadline reminders, and an analytics dashboard — built to manage my own internship search.",
-    stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    id: "project-two",
-    name: "Project two",
-    tag: "Frontend",
+    id: "waveform",
+    name: "Waveform",
+    subtitle: "Neuromodulation & Mental Wellness Platform",
+    tag: "Flagship Project · Web & Mobile",
     category: "frontend",
+    role: "Frontend Developer (Web + Mobile App)",
     description:
-      "A short one-line description of what this project does and the problem it solves for its users.",
-    stack: ["React", "Tailwind"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: "project-three",
-    name: "Project three",
-    tag: "Backend",
-    category: "backend",
-    description:
-      "A short one-line description of what this project does and the problem it solves for its users.",
-    stack: ["Python", "Flask"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A university group project combining EEG-based brainwave monitoring with digital wellness tools to help young adults manage stress, anxiety, and mild depressive symptoms through real-time signal tracking, calming audio therapy, guided micro-challenges, and wearable device integration.",
+    stack: [
+      "React Native",
+      "Redux Toolkit",
+      "Python",
+      "JavaScript",
+      "HTML",
+      "Java",
+      "Ruby",
+      "TypeScript",
+    ],
+    demoUrl: "https://waveform-medcap.vercel.app/",
+    featured: true,
+    webHeroImage: "/projects/waveform/waveform-web-hero.png",
   },
 ];
