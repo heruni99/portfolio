@@ -3,17 +3,56 @@ import ScrollReveal from "../ui/ScrollReveal";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.email || !formData.message) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 4000);
+
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/herunisp@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name || "Portfolio Visitor",
+          email: formData.email,
+          message: formData.message,
+          _subject: `New Portfolio Message from ${formData.name || formData.email}`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === "true" || data.success === true || data.message?.includes("success"))) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 8000);
+      } else {
+        throw new Error(data.message || "Failed to deliver message.");
+      }
+    } catch (err: any) {
+      console.error("Form submit error:", err);
+      setStatus("error");
+      setErrorMessage(
+        err.message || "Network error. Click below to send directly via email client."
+      );
+    }
   };
+
+  const mailtoUrl = `mailto:herunisp@gmail.com?subject=${encodeURIComponent(
+    `Portfolio Inquiry from ${formData.name || "Visitor"}`
+  )}&body=${encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+  )}`;
 
   return (
     <section id="contact" className="mx-auto max-w-[1400px] px-8 py-24 max-md:px-6 max-md:py-16 sm:px-12">
@@ -108,7 +147,8 @@ export default function Contact() {
                     placeholder="Your name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="rounded-xl border border-line/70 bg-bg/50 px-4 py-3.5 text-sm font-medium text-ink placeholder:text-inkSoft/50 outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/20"
+                    disabled={status === "loading"}
+                    className="rounded-xl border border-line/70 bg-bg/50 px-4 py-3.5 text-sm font-medium text-ink placeholder:text-inkSoft/50 outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/20 disabled:opacity-50"
                   />
                 </div>
 
@@ -120,7 +160,8 @@ export default function Contact() {
                     placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="rounded-xl border border-line/70 bg-bg/50 px-4 py-3.5 text-sm font-medium text-ink placeholder:text-inkSoft/50 outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/20"
+                    disabled={status === "loading"}
+                    className="rounded-xl border border-line/70 bg-bg/50 px-4 py-3.5 text-sm font-medium text-ink placeholder:text-inkSoft/50 outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/20 disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -133,17 +174,55 @@ export default function Contact() {
                   placeholder="Tell me about your project or opportunity..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="rounded-xl border border-line/70 bg-bg/50 px-4 py-3.5 text-sm font-medium text-ink placeholder:text-inkSoft/50 outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/20 resize-none"
+                  disabled={status === "loading"}
+                  className="rounded-xl border border-line/70 bg-bg/50 px-4 py-3.5 text-sm font-medium text-ink placeholder:text-inkSoft/50 outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/20 resize-none disabled:opacity-50"
                 />
               </div>
 
+              {/* Status Alert Banner */}
+              {status === "success" && (
+                <div className="rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-4 text-sm font-medium text-emerald-300 flex items-start gap-3">
+                  <span className="text-emerald-400 font-bold">✓</span>
+                  <div>
+                    <p className="font-bold text-emerald-200">Message sent successfully!</p>
+                    <p className="text-xs text-emerald-300/80 mt-0.5">
+                      Your message has been delivered to herunisp@gmail.com. I will reply soon!
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {status === "error" && (
+                <div className="rounded-xl border border-rose/40 bg-rose/10 p-4 text-sm font-medium text-rose flex flex-col gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">⚠️</span>
+                    <span>{errorMessage}</span>
+                  </div>
+                  <a
+                    href={mailtoUrl}
+                    className="inline-flex items-center gap-1 text-xs font-bold underline hover:text-white"
+                  >
+                    Click here to open email client directly →
+                  </a>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-rose px-6 py-4 font-sans text-xs font-extrabold uppercase tracking-widest text-white shadow-lg transition-all duration-300 hover:bg-roseDeep hover:shadow-xl hover:scale-[1.02] active:scale-98"
+                disabled={status === "loading"}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-rose px-6 py-4 font-sans text-xs font-extrabold uppercase tracking-widest text-white shadow-lg transition-all duration-300 hover:bg-roseDeep hover:shadow-xl hover:scale-[1.02] active:scale-98 disabled:opacity-60"
               >
-                {submitted ? (
+                {status === "loading" ? (
+                  <span className="flex items-center gap-2">
+                    <svg className="h-4 w-4 animate-spin text-white" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    Sending to Gmail...
+                  </span>
+                ) : status === "success" ? (
                   <span className="flex items-center gap-2 text-emerald-200">
-                    ✓ Message Sent!
+                    ✓ Message Delivered!
                   </span>
                 ) : (
                   <span className="flex items-center gap-2">
