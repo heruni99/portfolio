@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
+.font-display {
+  font-family: 'Space Grotesk', 'Syne', sans-serif !important;
+}
+
+
 @layer base {
   :root {
     /* Custom Palette Light Mode */
