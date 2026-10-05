@@ -39,4 +39,27 @@ export const projects: Project[] = [
     featured: true,
     webHeroImage: "/projects/waveform/waveform-web-hero.png",
   },
+  {
+    id: "prepeasy",
+    name: "PrepEasy",
+    subtitle: "Full-Stack Recipe & Meal Planning Platform",
+    tag: "Full-Stack Project · Web App",
+    category: "fullstack",
+    role: "Full-Stack Developer (solo project)",
+    description:
+      "PrepEasy is a full-stack recipe discovery and meal planning platform built to help home cooks search, save, and organize recipes with ease. It combines a React and TypeScript frontend with a Node.js/Express backend and MongoDB database, letting users browse recipes by category, view detailed ingredients and step-by-step instructions, and add their own recipes to a shared collection.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST API",
+    ],
+    demoUrl: "https://prep-easy-beta.vercel.app/",
+    githubUrl: "https://github.com/heruni99/PrepEasy",
+    featured: true,
+    webHeroImage: "/projects/prepeasy/prepeasy-web-hero.jpg",
+  },
 ];
+
