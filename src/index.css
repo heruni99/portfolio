@@ -24,16 +24,16 @@
   }
 
   .dark {
-    /* Custom Palette Dark Mode */
-    --color-bg: 11 27 50;              /* #0B1B32 - Abyssal Navy */
-    --color-bg-alt: 13 30 76;          /* #0D1E4C - Deep Navy card background */
-    --color-ink: 244 247 252;          /* Clean light text */
-    --color-ink-soft: 131 166 206;     /* #83A6CE - Soft Steel Blue text */
-    --color-rose: 229 201 215;          /* #E5C9D7 - Soft Blush highlight */
-    --color-rose-deep: 196 140 179;     /* #C48CB3 - Muted Mauve */
-    --color-rose-wash: 38 65 94;       /* #26415E - Dark Slate wash */
-    --color-accent-blue: 131 166 206;   /* #83A6CE - Soft Steel Blue */
-    --color-line: 38 65 94;             /* #26415E - Slate border line */
+    /* Premium Dark Mode — near-black, techy, modern */
+    --color-bg: 7 9 20;               /* #07091a — near-black deep space */
+    --color-bg-alt: 11 15 32;         /* #0b0f20 — card surface */
+    --color-ink: 236 242 255;         /* #ecf2ff — crisp near-white */
+    --color-ink-soft: 105 125 175;    /* #697daf — muted steel */
+    --color-rose: 218 100 165;        /* #da64a5 — vivid electric rose */
+    --color-rose-deep: 245 180 220;   /* #f5b4dc — bright rose highlight */
+    --color-rose-wash: 18 14 38;      /* #120e26 — deep violet tint for wash */
+    --color-accent-blue: 100 145 230; /* #6491e6 — electric blue */
+    --color-line: 26 32 62;           /* #1a203e — barely-there border */
   }
 }
 
@@ -56,11 +56,12 @@ body {
 }
 
 .dark body {
-  /* Gradient Background Dark Mode: rich deep techy gradient combining #0B1B32, #0D1E4C, and #26415E with subtle mauve aura #C48CB3 */
-  background-image: 
-    radial-gradient(circle at 85% 15%, rgba(196, 140, 179, 0.22) 0%, transparent 40%),
-    radial-gradient(circle at 15% 80%, rgba(38, 65, 94, 0.65) 0%, transparent 55%),
-    linear-gradient(135deg, #0b1b32 0%, #0d1e4c 55%, #182e54 100%);
+  /* Premium dark — near-black base with rose + indigo aura */
+  background-image:
+    radial-gradient(ellipse at 75% 5%,  rgba(218, 100, 165, 0.20) 0%, transparent 45%),
+    radial-gradient(ellipse at 10% 90%, rgba(100, 145, 230, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(80, 20, 120, 0.10) 0%, transparent 65%),
+    linear-gradient(160deg, #07091a 0%, #0b0f20 50%, #09091e 100%);
   background-attachment: fixed;
 }
 
