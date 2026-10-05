@@ -20,6 +20,7 @@ export default {
         sans: ["'Plus Jakarta Sans'", "sans-serif"],
         serif: ["'Instrument Serif'", "'Playfair Display'", "Georgia", "serif"],
         display: ["'Syne'", "'Unbounded'", "'Outfit'", "'Plus Jakarta Sans'", "sans-serif"],
+        handwriting: ["'Caveat'", "'Kaushan Script'", "cursive"],
       },
     },
   },

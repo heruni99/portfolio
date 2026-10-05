@@ -10,8 +10,12 @@ export default function Footer() {
             
             {/* Brand Header */}
             <div className="flex flex-col gap-2.5 text-left border-b border-white/10 pb-6 sm:pb-8">
-              <span className="font-mono text-3xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white">
-                samu_codes<span className="text-rose">.</span>
+              <span className="flex items-baseline text-3xl sm:text-5xl lg:text-6xl tracking-tighter text-white">
+                <span className="font-handwriting text-4xl sm:text-6xl lg:text-7xl font-bold text-rose inline-block transform -rotate-3 mr-1">
+                  samu
+                </span>
+                <span className="font-mono font-black text-white">_codes</span>
+                <span className="text-rose font-mono font-black">.</span>
               </span>
               <p className="text-white/60 font-sans text-sm sm:text-base max-w-[46ch]">
                 Building thoughtful digital products & software engineering solutions with clean code.
@@ -141,7 +145,7 @@ export default function Footer() {
 
           {/* Footer Bottom Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between border-t border-white/10 pt-8 text-xs font-mono text-white/50 gap-4">
-            <span>© 2026 Samu_codes. All rights reserved.</span>
+            <span className="flex items-center gap-1">© 2026 <span className="font-handwriting font-bold text-rose text-sm">samu</span><span>_codes. All rights reserved.</span></span>
             <span>Designed & Built with React, TypeScript & Tailwind</span>
           </div>
 

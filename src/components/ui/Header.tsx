@@ -50,12 +50,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/60 glass-card transition-colors duration-200">
       <div className="w-full flex items-center justify-between px-6 py-4 sm:px-12 lg:px-16">
-        {/* Top-Left: samu_codes. brand logo */}
+        {/* Top-Left: Samu_codes. brand logo */}
         <a
           href="#hero"
-          className="font-mono text-2xl font-black tracking-tighter text-ink transition-colors hover:text-rose shrink-0"
+          className="flex items-baseline text-2xl tracking-tighter text-ink transition-colors hover:text-rose shrink-0 group"
         >
-          Samu_codes<span className="text-rose">.</span>
+          <span className="font-handwriting text-3xl font-bold text-rose inline-block transform -rotate-3 transition-transform duration-200 group-hover:scale-110">
+            Samu
+          </span>
+          <span className="font-mono text-2xl font-black text-ink">_codes</span>
+          <span className="font-mono text-2xl font-black text-rose">.</span>
         </a>
 
         {/* Center: Numbered Navigation Links */}
