@@ -26,4 +26,13 @@ export const miniProjects: MiniProject[] = [
     demoUrl: "https://heruni99.github.io/rock-paper-scissors/",
     githubUrl: "https://github.com/heruni99/rock-paper-scissors",
   },
+  {
+    id: "js-calculator",
+    name: "JavaScript Calculator",
+    description:
+      "A responsive calculator built with HTML, CSS, and JavaScript. Supports standard arithmetic operations with a clean UI and real-time display updates.",
+    tags: ["JavaScript", "HTML", "CSS", "Responsive Design"],
+    demoUrl: "https://heruni99.github.io/js-calculator/",
+    githubUrl: "https://github.com/heruni99/js-calculator",
+  },
 ];
